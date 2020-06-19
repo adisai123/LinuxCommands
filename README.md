@@ -1,34 +1,33 @@
 # LinuxCommands
 #Author : Aditya Malpani
 
-***1 Type of file type***:
-	- - regular file
-	- d - directory
-	- l - link
-	- c - special file
-	- p - Named pipe 
-	- s - socket
-	- b - block file
+1. Type of file type:
+   - _   regular file
+   - d   directory
+   - l   link
+   - c   special file
+   - p   Named pipe 
+   - s   socket
+   - b   block file
 
-***2 type of file system structure*** 
-	- /boot - used by boot loader
-	- /root - root users home directory
-	- /dev - system device (disk, keyboard , flashdrive)
-	- /etc - configuration file
-	- /bin - everyday user command
-	- /sbin - system/filesystem command
-	- /opt - optional add-on applications
-	- /proc - running processes (only exist in memory)
-	- /lib - c programming library files needed by applications to run 
-	- /tmp - temporary file 
-	- /home - directory for users
-	- /var - system log
-	- /run - system daemons that starts early (eg. systemd  and devd)  to stores temporary running files like PID files
-	- /mnt - to mount external filesystem
-	- /media - for cdrom mounts
+2. Type of file system structure 
+   - /boot - used by boot loader
+   - /root - root users home directory
+   - /dev - system device (disk, keyboard , flashdrive)
+   - /etc - configuration file
+   - /bin - everyday user command
+   - /sbin - system/filesystem command
+   - /opt - optional add-on applications
+   - /proc - running processes (only exist in memory)
+   - /lib - c programming library files needed by applications to run 
+   - /tmp - temporary file 
+   - /home - directory for users
+   - /var - system log
+   - /run - system daemons that starts early (eg. systemd  and devd)  to stores temporary running files like PID files
+   - /mnt - to mount external filesystem
+   - /media - for cdrom mounts
 
-
-***3 find *** 
+3. find
 	```bash 
 	find <location> -name <filename>
 	```
@@ -36,35 +35,42 @@
 
 
 5. chmod ugo-r  change permissions of the file
+	```bash
 	chmod ugo+r
 	chmod  444 
 	chown a+r a for all 
-
+	
 	rwx rwx rwx  - user group others
 	0 - no permission
 	1- execute
 	2- write
 	3- execute + write
-	4 - read
-	5 - read + execute
+	4- read
+	5- read + execute
 	6- read + write
 	7- read + write + execute
-	
+	```
 	
 6. chown & chgrp  use -R (recursive)
+	```bash
 	chown/chgrp <user/groupname> <file/directory>
+	```
 
 7. ACL (accesscontrol list)
 	A perticular user not part of a member of any group created by you but still you want to give some read write access and also dont want to make it a part of group 
 	here come ACL 
 	commands :  setfacl and getfacl   
+	```bash
 	setfacl  -m u:username:rwx /path/to/file
 	setfacl -m g:groupname:rwx /path/to/file
 	setfacl -dm 
+	```
 	to remove:
+	```bash
 	setfacl -x 
-
+	```
 	example:
+	```bash
 	setfacl -m u:Nupur:rw abc 
 	
 		Nupur@aditya-ThinkPad-X220:/tmp$ getfacl abc 
@@ -76,18 +82,20 @@
 	group::r--
 	mask::rw-
 	other::r--
-
-
+	```
 As you assigne the ACL permission to a file/directory it adds + sign at the end of the permission
 setting w permission with ACL does not allow to remove file
 
 
-8. help command : 
-	1. whatis <command>
-	2. command --help
-	3. man command
+8. Help command : 
+ ```bash
+    whatis <command>
+    command --help
+    man command
+ ```
 
-9. write to the file externally (  > - override , >> - append the in the next line
+9. Write to the file externally (  > - override , >> - append the in the next line )
+    ```bash
 	Nupur@aditya-ThinkPad-X220:/tmp$ echo "aditya" > abc 
 	Nupur@aditya-ThinkPad-X220:/tmp$ cat abc 
 	aditya
@@ -98,33 +106,41 @@ setting w permission with ACL does not allow to remove file
 	Nupur@aditya-ThinkPad-X220:/tmp$ cat abc 
 	nupur
 	aditya
+    ```
 
-10.  tee command:
-`		Nupur@aditya-ThinkPad-X220:/tmp$ echo "aditya & Nupur " | tee -a abc 
-		aditya & Nupur 
-		Nupur@aditya-ThinkPad-X220:/tmp$ cat abc 
-		nupur
-		aditya
-		aditya & Nupur 
-		Nupur@aditya-ThinkPad-X220
+10. tee command:
+	```bash
+	Nupur@aditya-ThinkPad-X220:/tmp$ echo "aditya & Nupur " | tee -a abc 
+	aditya & Nupur 
+	Nupur@aditya-ThinkPad-X220:/tmp$ cat abc 
+	nupur
+	aditya
+	aditya & Nupur 
+	Nupur@aditya-ThinkPad-X220
+	```
 		
 11. Pipe is used to connect to the output of one command and redirect to input of other command ( | )
-		lNupur@aditya-ThinkPad-X220:/tmp$ ls -alrth | tail -1    (will give last line)
-		-rw-rw-r--+  1 aditya aditya   29 Apr 22 00:26 abc
-		Nupur@aditya-ThinkPad-X220:/tmp$ 
+	```bash
+	lNupur@aditya-ThinkPad-X220:/tmp$ ls -alrth | tail -1    (will give last line)
+	-rw-rw-r--+  1 aditya aditya   29 Apr 22 00:26 abc
+	Nupur@aditya-ThinkPad-X220:/tmp$ 
+	```bash
 
-12 . rm , mv , mkdir , rmdir
+12.  rm , mv , mkdir , rmdir
 
-13 , cat , more , less  (reverse of more , starts displaying file from last), head ,tail (reverse of head)    --- commands to display file containts
-		 cat mylinecount.txt | tail -4 |head -2   print line between 6 to 9
-
-14 cut 
+13.  cat , more , less  (reverse of more , starts displaying file from last), head ,tail (reverse of head)    --- commands to display file containts
+	```bash
+	cat mylinecount.txt | tail -4 |head -2   print line between 6 to 9
+	```
+14. cut 
+	```bash
 	cut -c1 filename
 	cur c1,2 filename
 	cut -d:  -f 2 filename
+	```
 
-
-15 : awk
+15. : awk
+	```bash
 		awk '{print $1,$3}'  filename
 		awk '{print $NF}' filename
 		awk '/aditya/ {print}' filename. -search particular string
@@ -135,88 +151,103 @@ setting w permission with ACL does not allow to remove file
 		 awk '{if($1 == "nupur") print $0}' cuttest.txt   -- if first field contains nupur then it will print that line
 
 		awk '{print NF}' cuttest.txt  - print number of columns in each row or line
+	```
 
+16. grep 
+	```bash
+	grep -c aditya cuttest.txt    number of type aditya occurred
+	grep -v aditya cutest.txt    does not match aditya
+	grep -i aditya cutest.txt     case insensitive
+	egrep -i "aditya|nupur" cuttest.txt  searches either aditya or nupur in the file
+	```
 
-16:grep 
-	grep -c aditya cuttest.txt   -- number of type aditya occurred
-	grep -v aditya cutest.txt.   --- does not match aditya
-	grep -i aditya cutest.txt.     --- case insensitive
-	egrep -i "aditya|nupur" cuttest.txt  -- searches either aditya or nupur in the file
-	
-
-17 : sort
+17.  sort
+	```bash
 		sort cuttest.txt  - will sort and output it to console
 
 		sort -r cuttest.txt  -- reverse sorting
 
 		sort -k2  cuttest.txt  -- sort by second field
+	```
 
-18 : uniq
-		[admalpan testlinux]$uniq -c adnu.txt
+18.  uniq
+	```bash
+		uniq -c adnu.txt
 
 		   2 aditya nupur
 
 		   2 nupur chandak
 
-		[admalpan testlinux]$
+	```
 
-19: tar -cvf <tarfilename>.tar filetoTar
+19. tar -cvf <tarfilename>.tar filetoTar
+	```bash
 	tar xvf <tarfilename>.tar
-
-20:	gzip abc
+	```
+20.	
+```bash
+	gzip abc
 	gzip -d abc.gz
-
-21: truncate -s 10 aditya,txt - reduce size from end 
-
-22 : combining and splitting file:
+```
+21.
+```bash
+	truncate -s 10 aditya,txt - reduce size from end 
+```
+22. combining and splitting file:
+```bash
 	cat file1 file2 file3 > file4
 	split -l 300 file.txt childfile
+```
 
-23 : vi 
-	shift + zz - close file
-	:wq! to close file
-	:q! to close file 
-	:%s/kd//g  -replace all
-	/search 
-	:10 - jump to line number 10
-	:set number - show line number before every line
-	:syntax on - show file in beautiful way
-	:set paste - edit file in paste mode
-	<escape> i - edit mode
-	d - delete   and 10 dd - will delete 10 lines from current line
-	c - copy  and 10 c  -- will copy 10 line from current line
-	p - paste 
-	uu - undo current changes
-	x - delete character
-	. - to repeate same command
-	v- visual mode , you can select strings using movement keys
-	0 - got to starting character of the line 
-	$ - ending character  of line
-	gg - start of the line
-	shift gg - end of the line
+23.  vi 
+   - shift + zz - close file
+   - :wq! to close file
+   - :q! to close file 
+   - :%s/kd//g  -replace all
+   - /search 
+   - :10 - jump to line number 10
+   - :set number - show line number before every line
+   - :syntax on - show file in beautiful way
+   - :set paste - edit file in paste mode
+   - <escape> i - edit mode
+   - d - delete   and 10 dd - will delete 10 lines from current line
+   - c - copy  and 10 c  -- will copy 10 line from current line
+   - p - paste 
+   - uu - undo current changes
+   - x - delete character
+   - . - to repeate same command
+   - v- visual mode , you can select strings using movement keys
+   - 0 - got to starting character of the line 
+   - $ - ending character  of line
+   - gg - start of the line
+   - shift gg - end of the line
 
-24 : sed  command : i flag used to reflect change into the file
-	find and replace on screen :  sed 's/aditya/nupur/g' mylinecount.txt  use i option to reflect changes
-	find and delete : sed -i 's/aditya//g' mylinecount.txt  : used i to reflect changes in file
-	remove lines : sed '/9/d' mylinecount.txt 
-	remove empty lines : sed '/^$/d' mylinecount.txt
-	reomve first line or n line of the file  :  sed '1d' mylinecount.txt 
-	replace tab with space   sed 's/\t/ /g' mylinecount.txt 
-	view specific line : sed -n 12,18p mylinecount.txt 
-	view except specific line : sed 12,18d mylinecount.txt
-	replace all matching except specific line : sed '8!/s/aditya/nupur/' mylinecount.txt
+24.  sed  command : i flag used to reflect change into the file
+   - find and replace on screen :  sed 's/aditya/nupur/g' mylinecount.txt  use i option to reflect changes
+   - find and delete : sed -i 's/aditya//g' mylinecount.txt  : used i to reflect changes in file
+   - remove lines : sed '/9/d' mylinecount.txt 
+   - remove empty lines : sed '/^$/d' mylinecount.txt
+   - reomve first line or n line of the file  :  sed '1d' mylinecount.txt 
+   - replace tab with space   sed 's/\t/ /g' mylinecount.txt 
+   - view specific line : sed -n 12,18p mylinecount.txt 
+   - view except specific line : sed 12,18d mylinecount.txt
+   - replace all matching except specific line : sed '8!/s/aditya/nupur/' mylinecount.txt
 
-25 useradd: will add entry in cat /etc/passwd ;  cat /etc/shadow (password and )
+25. useradd: will add entry in cat /etc/passwd ;  cat /etc/shadow (password and )
+```bash
 	useradd -g groupname -s /bin/bash -m -d /home/nupur nupur
+```
 
-26 id :
+26. id :
+```bash
 	aditya@aditya-ThinkPad-X220:~$ id Nupur
 		uid=1001(Nupur) gid=1001(Nupur) groups=1001(Nupur)
 	aditya@aditya-ThinkPad-X220:~$
-
-27 sudo groupadd family
+```
+27. sudo groupadd family
+```bash
 	cat /etc/group
-
+```
 28 delete user : userdel aditya
 
 29 delete group : groupdel family

@@ -1,34 +1,37 @@
 # LinuxCommands
 #Author : Aditya Malpani
 
-1. type of file type:
-		1. - regular file
-		2. d - directory
-		3. l - link
-		4. c - special file
-		5. p - Named pipe 
-		6. s - socket
-		7. b - block file
+***1 Type of file type***:
+	- - regular file
+	- d - directory
+	- l - link
+	- c - special file
+	- p - Named pipe 
+	- s - socket
+	- b - block file
 
-2. type of file system structure 
-		1. /boot - used by boot loader
-		2./root - root users home directory
-		3. /dev - system device (disk, keyboard , flashdrive)
-		4./etc - configuration file
-		5. /bin - everyday user command
-		6/ /sbin - system/filesystem command
-		7 /opt - optional add-on applications
-		8. /proc - running processes (only exist in memory)
-		7. /lib - c programming library files needed by applications to run 
-		8. /tmp - temporary file 
-		9. /home - directory for users
-		10. /var - system log
-		11. /run - system daemons that starts early (eg. systemd  and devd)  to stores temporary running files like PID files
-		12 /mnt - to mount external filesystem
-		13 /media - for cdrom mounts
-		
+***2 type of file system structure*** 
+	- /boot - used by boot loader
+	- /root - root users home directory
+	- /dev - system device (disk, keyboard , flashdrive)
+	- /etc - configuration file
+	- /bin - everyday user command
+	- /sbin - system/filesystem command
+	- /opt - optional add-on applications
+	- /proc - running processes (only exist in memory)
+	- /lib - c programming library files needed by applications to run 
+	- /tmp - temporary file 
+	- /home - directory for users
+	- /var - system log
+	- /run - system daemons that starts early (eg. systemd  and devd)  to stores temporary running files like PID files
+	- /mnt - to mount external filesystem
+	- /media - for cdrom mounts
 
-3. find <location> -name <filename>
+
+***3 find *** 
+	```bash 
+	find <location> -name <filename>
+	```
 4. locate - use system database so its faster but newly created files wont be visible 
 
 

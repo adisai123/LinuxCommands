@@ -129,8 +129,13 @@ setting w permission with ACL does not allow to remove file
 12.  rm , mv , mkdir , rmdir
 
 13.  cat , more , less  (reverse of more , starts displaying file from last), head ,tail (reverse of head)    --- commands to display file containts
+
+you can use cat command to add content into the file
 	```bash
 	cat mylinecount.txt | tail -4 |head -2   print line between 6 to 9
+	
+	cat <<end>> aanu.txt
+	
 	```
 14. cut 
 	```bash

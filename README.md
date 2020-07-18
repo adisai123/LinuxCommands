@@ -134,9 +134,15 @@ you can use cat command to add content into the file
 	```bash
 	cat mylinecount.txt | tail -4 |head -2   print line between 6 to 9
 	
-	cat <<end>> aanu.txt
-	
+	aditya@aditya-nupur:~$ cat <<end>> aanu.love
+	> hey nuuu
+	> end
+	aditya@aditya-nupur:~$ cat aanu.love 
+	hey nuuu
+	aditya@aditya-nupur:\~\$ 
 	```
+
+
 14. cut 
 	```bash
 	cut -c1 filename

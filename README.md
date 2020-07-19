@@ -701,3 +701,8 @@ Read more: https://javarevisited.blogspot.com/2011/06/special-bash-parameters-in
 74: swap : 
 used when ram is fulled
 inactive page in the memory are moved to swap space
+
+75: execute command in endless loop :
+```bash 
+	while true; do echo "hi" >> abc.txt ; done
+```

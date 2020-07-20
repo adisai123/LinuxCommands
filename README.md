@@ -705,4 +705,7 @@ inactive page in the memory are moved to swap space
 75: execute command in endless loop :
 ```bash 
 	while true; do echo "hi" >> abc.txt ; done
+	or 
+	# for i in {1..10}; do echo -n "This is a test in loop $i "; date ; sleep 5; done
+
 ```

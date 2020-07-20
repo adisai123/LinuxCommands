@@ -131,6 +131,8 @@ setting w permission with ACL does not allow to remove file
 13.  cat , more , less  (reverse of more , starts displaying file from last), head ,tail (reverse of head)    --- commands to display file containts
 
 you can use cat command to add content into the file
+
+
 	```bash
 	cat mylinecount.txt | tail -4 |head -2   print line between 6 to 9
 	
@@ -144,6 +146,7 @@ you can use cat command to add content into the file
 
 
 14. cut 
+
 	```bash
 	cut -c1 filename
 	cur c1,2 filename
@@ -164,8 +167,10 @@ you can use cat command to add content into the file
 		awk '{print NF}' cuttest.txt  - print number of columns in each row or line
 	```
 
+
 16. grep 
-	```bash
+
+	```
 	grep -c aditya cuttest.txt    number of type aditya occurred
 	grep -v aditya cutest.txt    does not match aditya
 	grep -i aditya cutest.txt     case insensitive
@@ -175,7 +180,7 @@ you can use cat command to add content into the file
 17.  sort
 
 
-	```bash
+	```
 		sort cuttest.txt  - will sort and output it to console
 
 		sort -r cuttest.txt  -- reverse sorting

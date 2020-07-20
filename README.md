@@ -503,9 +503,9 @@ scripting language
 			$_ (dollar underscore) is another special bash parameter and used to reference the absolute file name of the shell or bash script which is being executed as specified in the argument list. This bash parameter is also used to hold the name of mail file while checking emails.
 			$@ (dollar at the rate) bash parameter is used to expand into positional parameters starting from one. When expansion occurs inside double-quotes, every parameter expands into separate words.
 			$* (dollar star) this is similar to $@ special bash parameter  only difference is when expansion occurs with double quotes, it expands to a single word with the value of each bash parameter separated by the first character of the IFS special environment variable.
-
-
 Read more: https://javarevisited.blogspot.com/2011/06/special-bash-parameters-in-script-linux.html#ixzz6LBQASLcG
+
+
 45 : alias 
 		alias pl="pwd ; ls -lrth"
 		to check list of alias fire; alias

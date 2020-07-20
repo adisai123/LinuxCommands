@@ -317,10 +317,6 @@ you can use cat command to add content into the file
 	date -s ""  -- set date
 
 
-Mh14 ja 0089
-vertica car
-
-
 37. process management:
     fg
     bg

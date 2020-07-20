@@ -707,6 +707,7 @@ inactive page in the memory are moved to swap space
 ```
 
 76:Linux command to repeat a string n times 
+
 	1. yes command: to 
 ```bash
 [admalpan]$yes "HelloWorld" | head -n 10

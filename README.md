@@ -173,6 +173,8 @@ you can use cat command to add content into the file
 	```
 
 17.  sort
+
+
 	```bash
 		sort cuttest.txt  - will sort and output it to console
 
@@ -182,6 +184,8 @@ you can use cat command to add content into the file
 	```
 
 18.  uniq
+
+
 	```bash
 		uniq -c adnu.txt
 
@@ -192,10 +196,12 @@ you can use cat command to add content into the file
 	```
 
 19. tar -cvf <tarfilename>.tar filetoTar
+	
 	```bash
 	tar xvf <tarfilename>.tar
 	```
-20.	
+20.
+	
 ```bash
 	gzip abc
 	gzip -d abc.gz

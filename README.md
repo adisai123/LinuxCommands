@@ -705,3 +705,27 @@ inactive page in the memory are moved to swap space
 	# for i in {1..10}; do echo -n "This is a test in loop $i "; date ; sleep 5; done
 
 ```
+
+76:Linux command to repeat a string n times 
+	1. yes command: to 
+```bash
+[admalpan]$yes "HelloWorld" | head -n 10
+HelloWorld
+HelloWorld
+HelloWorld
+HelloWorld
+HelloWorld
+HelloWorld
+HelloWorld
+HelloWorld
+HelloWorld
+HelloWorld
+[admalpan]$
+```
+	2. print 
+```bash 
+[admalpan ~]$printf "hi\n%0.s" {1..2}
+hi
+hi
+[admalpan ~]$
+```

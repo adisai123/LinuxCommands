@@ -20,6 +20,12 @@ nmap port options (find numer of open ports)
  -nS , -nT, -nT
 nmap -sP  subnetip
 
+scan perticular port :
+aditya@aditya-nupur:~$ sudo nmap -sS -p 7070 192.168.43.196 
+
+service scap :
+nmap -sV  192.168.43.196 
+
 ```
 
 Protocol list:

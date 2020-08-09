@@ -26,6 +26,9 @@ aditya@aditya-nupur:~$ sudo nmap -sS -p 7070 192.168.43.196
 service scap :
 nmap -sV  192.168.43.196 
 
+Enumeration scan
+nmap -A -p 7070 192.168.43.196
+
 ```
 
 Protocol list:

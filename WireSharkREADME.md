@@ -1,10 +1,14 @@
-filter:
-tcp.flags.push == 1  #to get data packet
+# filter:
+```
+tcp.flags.push == 1  # to get data packet
 
 ip.dsfield.dscp != 0 
+
 ip.addr eq 192.168.25.200 and ip.addr eq 192.168.25.50
+
 frame contains "QHTTP"    # capture frame contents
 
+```
 
 Protocol list:
 IP

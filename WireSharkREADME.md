@@ -10,6 +10,8 @@ tcp.flags.ack ==1 and tcp.flags.syn == 1   #list of ports
 
 frame contains "QHTTP"    # capture frame contents
 
+tcp.port == 80 || udp.port == 80
+
 ```
 
 Protocol list:

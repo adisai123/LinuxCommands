@@ -14,6 +14,12 @@ tcp.port == 80 || udp.port == 80
 
 ```
 
+```
+Discover live system 
+nmap -sP  subnetip
+
+```
+
 Protocol list:
 IP
 UDP

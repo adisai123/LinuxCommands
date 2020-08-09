@@ -16,6 +16,8 @@ tcp.port == 80 || udp.port == 80
 
 ```
 Discover live system 
+nmap port options
+ -nS , -nT, -nT
 nmap -sP  subnetip
 
 ```

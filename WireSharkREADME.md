@@ -7,6 +7,12 @@ able to take the bits and bytes and present them in an organized,
 familiar, and human-readable format is what brings people to think of
 using Wireshark.
 
+```bash
+
+command to capture packet:
+dumpcap -i lo -a duration:60 -w output.pcapng
+
+```
 
 # filter:
 ```

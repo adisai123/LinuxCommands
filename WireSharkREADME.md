@@ -30,6 +30,19 @@ Enumeration scan
 nmap -A -p 7070 192.168.43.196
 
 ```
+```
+http.request – Display all HTTP requests.
+http.request || http.response – Display all HTTP request and
+responses.
+ip.addr == 127.0.0.1 – Display all IP packets whose source or
+destination is localhost.
+tcp.len < 100 – Display all TCP packets whose data length is
+less than 100 bytes.
+http.request.uri matches “(gif)$” - Display all HTTP requests
+in which the uri ends with “gif”.
+dns.query.name == “www.google.com” - Display all DNS
+queries for “www.google.com”.
+```
 
 Protocol list:
 IP

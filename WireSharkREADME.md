@@ -1,3 +1,13 @@
+# Definition
+Wireshark is an immensely powerful tool with quite a bit of deep and
+complex functionality. It is capable of handling a wide range of known
+(and unknown) protocols. But although the functionality range is broad,
+most of it aligns to one end: to capture packets and analyze them. Being
+able to take the bits and bytes and present them in an organized,
+familiar, and human-readable format is what brings people to think of
+using Wireshark.
+
+
 # filter:
 ```
 tcp.flags.push == 1  # to get data packet

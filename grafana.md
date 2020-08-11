@@ -6,6 +6,8 @@ Telemetry data : like for ex time taken to connect to data base. can be visualis
 docker run -d -p 3000:3000 --name grafana grafana/grafana:6.5.0
 ```
 
+db configuration file : grafana.ini  (remove ; in that file . After modification restart grafana) 
+
 Grafana is just a tool to visualise , it does not staore data , it pull data from different data source like mysql, graphite, etc.
 
 # Graphite

@@ -15,6 +15,30 @@ Grafana is just a tool to visualise , it does not staore data , it pull data fro
   2.  Bucket tree identified by . like aditya.execution.count
   3. value of counter is increased by the value it receives
   4. types : counter , timer , gauge
+  5. Graphite made up of front end (graphite web ) and backend (carbon)
+  6. front end has a database to store graphs you created.(default sqlite)(also external database is also possible) (you can alos enable cacheing using memcache)
+  7. carbon has carbon cache , also whisper database is also there to store data.
+  8. installation : sudo apt-get install graphite-web graphite-carbon
+  9.  sudo vim /etc/default/graphite-carbon 
+  10. storage policy  cat /etc/carbon/storage-schemas.conf (how log bucket will be set has this setting)
+  11.  Docker grafana , graphite , stastd : https://hub.docker.com/r/hopsoft/graphite-statsd/   
+        docker pull hopsoft/graphite-statsd
+        
+        ```
+        docker run -d\
+ --name graphite\
+ --restart=always\
+ -p 80:80\
+ -p 81:81\
+ -p 2003-2004:2003-2004\
+ -p 2023-2024:2023-2024\
+ -p 8125:8125/udp\
+ -p 8126:8126\
+ hopsoft/graphite-statsd
+ ```
+ 
+ statsd :sending data
+ echo "$2:1|c"  | nc -w 1 -u $1 8125
  ## Statsd  is used for collecting data and passing it to graphite.
   1.  data is sent in the form of plain text
   2.  Use UDP for that(default)

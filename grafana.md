@@ -44,6 +44,9 @@ Grafana is just a tool to visualise , it does not staore data , it pull data fro
   2.  Use UDP for that(default)
   3.  data format =  <bucker>:<value>|type := example aditya.execuion.count:1|C  # counter will be increased by 1
   
+  dynaamic variale
+  
+  you can add annotation on graph (kind of tool tips)
   
   counter , gauge , heatmap 
   

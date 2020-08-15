@@ -48,7 +48,7 @@ Grafana is just a tool to visualise , it does not staore data , it pull data fro
   
   you can add annotation on graph (kind of tool tips)
   
-  alerts (if range cross , add rules)
+  alerts , email(notification) (if range cross , add rules)
   
   counter , gauge , heatmap 
   

@@ -52,3 +52,7 @@ Grafana is just a tool to visualise , it does not staore data , it pull data fro
   
   counter , gauge , heatmap 
   
+  
+  influxdb : - its timeseries databases
+  Telegraf is a metrics collection series
+  

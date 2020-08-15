@@ -45,4 +45,5 @@ Grafana is just a tool to visualise , it does not staore data , it pull data fro
   3.  data format =  <bucker>:<value>|type := example aditya.execuion.count:1|C  # counter will be increased by 1
   
   
+  counter , gauge , heatmap 
   

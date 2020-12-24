@@ -244,6 +244,12 @@ you can use cat command to add content into the file
    - gg - start of the line
    - shift gg - end of the line
 
+	visual mode 
+	c - change selected text ( esc + enter button)
+	>	shift right
+	<	shift left
+	~     switch case ( lower to upper or upper to lower)
+
 24.  sed  command : i flag used to reflect change into the file
    - find and replace on screen :  sed 's/aditya/nupur/g' mylinecount.txt  use i option to reflect changes
    - find and delete : sed -i 's/aditya//g' mylinecount.txt  : used i to reflect changes in file
@@ -741,3 +747,9 @@ hi
 hi
 [admalpan ~]$
 ```
+
+
+
+
+
+

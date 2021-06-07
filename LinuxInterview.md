@@ -29,7 +29,18 @@ nc -l 192.168.92.19 <port> -k
    
   
 Find file n days old 
- to find line with 2 days old
+ to find line with x days old and delete
+ ```bash
+ $ find <Path_To_Old_Files> -type f -mtime +30 | xargs rm -f
+Or,
+
+$ find <Path_To_Old_Files> -mtime +30 -exec rm -f {} \;
+Or,
+
+$ find <Path_To_Old_Files> -mtime +30 -delete;
+
+```
+ 
 ```bash
  find . -mtime +0 # find files modified greater than 24 hours ago
 find . -mtime 0 # find files modified between now and 1 day ago

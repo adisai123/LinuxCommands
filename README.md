@@ -992,6 +992,19 @@ hi
 [admalpan ~]$
 ```
 
+Netcat without ssh you can log in into other system..
+
+nc -l -p 6996 -e /bin/bash
+nc 10.10.10.10 6996
+
+sending file
+nc -l -p 8888 > try.txt
+cat '/root/try.txt' | nc 10.10.10.10 8888
+
+ssh tunneling
+
+
+
 
 
 

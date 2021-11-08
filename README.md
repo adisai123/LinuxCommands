@@ -1006,7 +1006,8 @@ ssh -L localport:remoteip:port root@remoteip
 safe way: 
 ssh -nNT -L 9900:localhost:9900 root@remoteip
 
-
+Remote ssh tunnel
+ssh -R 8888:localhost:8080 root@remotrip
 
 
 

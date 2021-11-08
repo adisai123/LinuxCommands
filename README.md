@@ -1009,6 +1009,10 @@ ssh -nNT -L 9900:localhost:9900 root@remoteip
 Remote ssh tunnel
 ssh -R 8888:localhost:8080 root@remotrip
 
+Dynamic port forwarding from work to home as some sites are blocked.
+ssh -D 8181 pi@homeip
+
+
 
 
 

@@ -1001,13 +1001,14 @@ sending file
 nc -l -p 8888 > try.txt
 cat '/root/try.txt' | nc 10.10.10.10 8888
 
-ssh tunneling
+ssh tunneling: I want to access remote resource..
 ssh -L localport:remoteip:port root@remoteip
 safe way: 
 ssh -nNT -L 9900:localhost:9900 root@remoteip
 
-Remote ssh tunnel
+Remote ssh tunnel : I want ppl access local resource
 ssh -R 8888:localhost:8080 root@remotrip
+
 
 Dynamic port forwarding from work to home as some sites are blocked.
 ssh -D 8181 pi@homeip
